@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+}
+body {
+  background-color: #000;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.logo {
+  max-width: 345px;
+  margin: 0 auto;
+  margin-top: 135px;
+}
+.logo img {
+  min-width: 335px;
+}
+.button {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 0px 0px 4px 1px #fff;
+  cursor: pointer;
+  outline: none;
+  margin-top: 70px;
+}
+.button:hover .upper {
+  background-color: #fdeb70;
+}
+.button .upper {
+  background-color: #ffe81f;
+  padding: 20px 15px;
+  border-radius: 7px;
+  position: relative;
+  z-index: 1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #c2ae00;
+  left: 0;
+  top: 15px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 4px 1px #fff;
+}
+.button .text {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-weight: bold;
+}
+.button:hover {
+  top: 5px;
+}
+.button:hover:before {
+  top: 10px;
+}
+.button.clicked {
+  top: 10px;
+}
+.button.clicked .upper {
+  background-color: #fded63;
+}
+.button.clicked p {
+  color: #c2ae00;
+}
+.button.clicked:before {
+  top: 5px;
+}
+.left-star {
+  max-width: 40px;
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.right-star {
+  max-width: 40px;
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button.clicked .left-star, .button.clicked .right-star {
+  opacity: 0.25;
+}
+.que {
+  margin-top: 80px;
+  text-align: center;
+  font-weight: 800;
+}
+.que p, .que ul {
+  font-size: 23px;
+  padding: 10px 0;
+}
+.que li {
+  font-size: 23px;
+  list-style: none;
+}
+.yellow-text {
+  color: #ffe81f;
+}
+.que .p-0 {
+  padding: 10px 0;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+  .logo {
+    max-width: 200px;
+    margin-top: 50px;
+  }
+  .button {
+    margin-top: 20px;
+    max-width: 400px;
+  }
+  .button .text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .button {
+    max-width: 300px;
+  }
+  .wrapper {
+    padding-bottom: 20px;
+  }
+  .button .text {
+    font-size: 14px;
+  }
+  .button .upper {
+    height: 30px;
+  }
+  .left-star {
+    max-width: 30px;
+    left: -40px;
+  }
+  .right-star {
+    max-width: 30px;
+    right: -40px;
+  }
+  .que p, .que ul, .que li {
+    font-size: 16px;
+  }
+}
